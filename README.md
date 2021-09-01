@@ -1,6 +1,6 @@
-# Dynamic Previews Implemetation
+# Dynamic Previews Implementation
 
-Implementiton based on Dynamic Previews
+Implementation based on Dynamic Previews
 
 ## Documentation Links
 
