@@ -30,4 +30,4 @@ You need to do 2 things to embed the Player.
 | numOfVideos | number | To specify number of videos in the playlist. Default value : `7` |
 
 ### Example Links
-- [DM Story demo](https://dmvs-apac.github.io/dynamic-preview/examples/story_examples/)
+- [DM Story demo](https://staging.dmvs-apac.com/dmStory/index.html)
