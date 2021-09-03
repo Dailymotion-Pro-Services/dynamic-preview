@@ -1,6 +1,6 @@
-# Dailymotion Preview Player
+# Dailymotion Previews
 
-Dailymotion Preview Player is another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case)
+Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your dailymotion video page to improve monetisation options. You will also be able to redirect to a custom URL (coming soon!). 
 
 ### Start Embedding
 
