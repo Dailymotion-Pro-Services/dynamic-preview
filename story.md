@@ -2,6 +2,7 @@
 
 To use Dailymotion Story you must create a player first through [Partner HQ](https://www.dailymotion.com/partner/x1wzpns/embed/players) and get the `{PLAYER_ID}`.
 > Set player's Aspect ratio as `9:16` 
+
 You also need to create or find a playlist to embed for your story. Learn more on [how to create, sort, feed and embed playlist](https://faq.dailymotion.com/hc/en-us/sections/360003674799-Playlist). When you are finished, add the `{PLAYLIST_ID}` to your embed code below.
 
 ### Start Embedding
