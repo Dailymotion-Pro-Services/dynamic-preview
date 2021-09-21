@@ -62,4 +62,4 @@ Here is an example.
 > As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
 
 **Example:**
-- [Title CTA playgrounf - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/)
+- [Title CTA card - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/)
