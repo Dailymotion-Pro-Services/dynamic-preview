@@ -26,7 +26,7 @@ You need to do 2 things to embed the Previews.
 | playlistId <br /> `Mandatory` | string | Set playlist xid directly to the tag to embed playlist|
 | numOfVideos | number | To specify the number of videos in the playlist. Default value : `5` |
 | syndication | string | Syndication key. Needed if the video content does not belong to your channel/network of channels AND/OR if you embed the Dailymotion Previews into specific 3rd party environments (Google AMP, Facebook IA, OTT products, in-app, operated but not owned web domains…). This enables tracking and targeting. |
-| type | string | Can be set as `verticle`/ `horizontal type of the preview. By default its `horizontal i.e., `16:9` aspect-ratio |
+| type | string | Can be set as `verticle`/ `horizontal` type of the preview. By default its `horizontal i.e., `16:9` aspect-ratio |
 
 ### Example Links
 - [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index.html)
