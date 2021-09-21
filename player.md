@@ -1,6 +1,6 @@
 # Dailymotion Previews
 
-Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your dailymotion video page to improve monetisation options. 
+Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your Dailymotion video page to improve monetization options. 
 
 ### Start Embedding
 
@@ -24,9 +24,9 @@ You need to do 2 things to embed the Previews.
 | Name | Type | Description |
 | :---: | :---: | --- |
 | playlistId <br /> `Mandatory` | string | Set playlist xid directly to the tag to embed playlist|
-| numOfVideos | number | To specify number of videos in the playlist. Default value : `5` |
-| syndication | string | Syndication key. Needed if the video content does not belong to your channel / network of channels AND/OR if you embed the Dailymotion Previews into specific 3rd party environments (Google AMP, Facebook IA, OTT products, in-app, operated but not owned web domains…). This enables tracking and targeting. |
-| type | string | Can be set as `verticle`/ `horizental` type of the preview. By default its `horizental` i.e., `16:9` aspect-ratio |
+| numOfVideos | number | To specify the number of videos in the playlist. Default value : `5` |
+| syndication | string | Syndication key. Needed if the video content does not belong to your channel/network of channels AND/OR if you embed the Dailymotion Previews into specific 3rd party environments (Google AMP, Facebook IA, OTT products, in-app, operated but not owned web domains…). This enables tracking and targeting. |
+| type | string | Can be set as `verticle`/ `horizontal type of the preview. By default its `horizontal i.e., `16:9` aspect-ratio |
 
 ### Example Links
 - [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index.html)
@@ -35,7 +35,7 @@ You need to do 2 things to embed the Previews.
 
 ### Features:
 
-Dailymotion Previews also provide features to customize title and its CTA ( Call to Action ). By default clicking on title will redirect to playlist link in Dailymotion page.
+Dailymotion Previews also provide features to customize the title and its CTA ( Call to Action ). By default clicking on a title will redirect to the Dailymotion video page.
 
 To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dmvs-apac.github.io/dynamic-preview/player#start-embedding).
 
@@ -59,7 +59,7 @@ Here is an example.
     }
 </script>
 ```
-> As you see above data, title/CTA link of the video can be replaced from default value where `video_id` is `mandatory` field.
+> As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
 
 **Example:**
 - [Title CTA playgrounf - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/)
