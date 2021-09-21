@@ -1,10 +1,10 @@
 # Dailymotion Previews
 
-Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your dailymotion video page to improve monetisation options. You will also be able to redirect to a custom URL (coming soon!). 
+Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your dailymotion video page to improve monetisation options. 
 
 ### Start Embedding
 
-You need to do 2 things to embed the Player.
+You need to do 2 things to embed the Previews.
 
 1. Put the [script](https://staging.dmvs-apac.com/dm-preview-player/dm-preview.js) at the very bottom before `body` end in your website
 ```js
@@ -25,6 +25,41 @@ You need to do 2 things to embed the Player.
 | :---: | :---: | --- |
 | playlistId <br /> `Mandatory` | string | Set playlist xid directly to the tag to embed playlist|
 | numOfVideos | number | To specify number of videos in the playlist. Default value : `5` |
+| syndication | string | Syndication key. Needed if the video content does not belong to your channel / network of channels AND/OR if you embed the Dailymotion Previews into specific 3rd party environments (Google AMP, Facebook IA, OTT products, in-app, operated but not owned web domains…). This enables tracking and targeting. |
+| type | string | Can be set as `verticle`/ `horizental` type of the preview. By default its `horizental` i.e., `16:9` aspect-ratio |
 
 ### Example Links
-- [DM Preview Player demo](https://staging.dmvs-apac.com/dm-preview-player/index.html)
+- [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index.html)
+- [DM Preview fixed](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index_fixed.html)
+- [DM Preview verticle](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index_fixed.html)
+
+### Features:
+
+Dailymotion Previews also provide features to customize title and its CTA ( Call to Action ). By default clicking on title will redirect to playlist link in Dailymotion page.
+
+To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dmvs-apac.github.io/dynamic-preview/player#start-embedding).
+
+Data for title card can be set inside `<script type="application/json">` as `JSON` format.
+
+Here is an example.
+
+```html
+<script type="application/json" id="dm_preview_text">
+    {
+        "title_card": [
+            {
+                "video_id": "x847mil",
+                "text": "Custome title for rahul gandhi"
+            },
+            {
+                "video_id": "x82qaiq",
+                "link": "https://www.example.com/customelink"
+            }
+        ]
+    }
+</script>
+```
+> As you see above data, title/CTA link of the video can be replaced from default value where `video_id` is `mandatory` field.
+
+**Example:**
+- [Title CTA playgrounf - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/)
