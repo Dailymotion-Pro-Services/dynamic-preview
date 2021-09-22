@@ -29,9 +29,9 @@ You need to do 2 things to embed the Previews.
 | type | string | Can be set as `verticle`/ `horizontal` type of the preview. By default its `horizontal` i.e., `16:9` aspect-ratio |
 
 ### Example Links
-- [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index.html)
-- [DM Preview fixed](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index_fixed.html)
-- [DM Preview verticle](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/index_fixed.html)
+- [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index.html)
+- [DM Preview fixed](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index_fixed.html)
+- [DM Preview verticle](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index_fixed.html)
 
 ### Features:
 
