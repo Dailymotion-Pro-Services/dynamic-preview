@@ -30,6 +30,7 @@ You need to do 2 things to embed the Player.
 | playlistId <br /> `Mandatory` | string | Set playlist xid directly to the tag to embed playlist|
 | PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/x1wzpns/embed/players) in the player tab, inside the embed menu. |
 | numOfVideos | number | To specify number of videos in the playlist. Default value : `7` |
+| adsParams | string	 | To add custom ad prameters. Default value : `story` |
 
 ### Example Links
 - [DM Story demo](https://staging.dmvs-apac.com/dmStory/index.html)
