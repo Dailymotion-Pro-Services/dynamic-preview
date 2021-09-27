@@ -63,11 +63,11 @@
         "title_card": [
           {
             "video_id": "x847mil",
-            "text": "Custome title for rahul gandhi"
+            "text": "Custom title for rahul gandhi"
           },
           {
             "video_id": "x82qaiq",
-            "link": "https://www.example.com/customelink"
+            "link": "https://www.example.com/customlink"
           }
         ]
     }
