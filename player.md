@@ -1,6 +1,6 @@
 # Dailymotion Previews
 
-Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your Dailymotion video page to improve monetization options. 
+Dailymotion Previews are another implementation with [Dynamic Previews](https://www.canva.com/design/DAEGDbSibZE/cvoKs-MEOdq3paAehFLkbQ/view?website#4:l-equipe-case). Previews let you surface top stories from your newsroom(s) and surface them across your site. By default, the previews redirect to your Dailymotion video page to improve monetization options.
 
 ### Start Embedding
 
@@ -45,11 +45,11 @@ Here is an example.
         "title_card": [
             {
                 "video_id": "x847mil",
-                "text": "Custome title for rahul gandhi"
+                "text": "Custom title for rahul gandhi"
             },
             {
                 "video_id": "x82qaiq",
-                "link": "https://www.example.com/customelink"
+                "link": "https://www.example.com/customlink"
             }
         ]
     }
@@ -57,7 +57,7 @@ Here is an example.
 ```  
 > As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
 
-- We provide [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to change the color of the porgress bar at the top the Dailymotion Previews.  
+- We provide [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to change the color of the progress bar at the top the Dailymotion Previews.  
 Here is an example.  
 ```css
 .dm-preview{
