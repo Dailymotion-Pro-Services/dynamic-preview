@@ -88,6 +88,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       scr.setAttribute("id", "dm_preview_text");
       scr.textContent = JSON.stringify(DM_data);
       document.body.append(scr);
+
+      const DM_data_color = window.parent.DM_data_color;
+      const style = document.createElement("style");
+      style.innerHTML = `.dm-preview{
+        --dm-preview-progress-bg: ${DM_data_color.progress_bg};
+        --dm-preview-progress-color: ${DM_data_color.progress_cl};
+      }`;
+      document.body.append(style);
     </script>
 
     <div class="w3-twothird w3-center">

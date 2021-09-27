@@ -9,6 +9,8 @@
     const codeWrapper = document.getElementById("codeWrapper");
     const applyBtn = document.getElementById("applyBtn");
     const codeSample1 = document.getElementById("codeSample1");
+    const progressBg = document.getElementById("progressBg");
+    const progressCl = document.getElementById("progressCl");
 
     controlDesk.addEventListener("click",()=>{
         if(!controlDesk.classList.contains("selected")){
@@ -37,6 +39,10 @@
 
     applyBtn.addEventListener("click",()=>{
         window.DM_data = editor.get();
+        window.DM_data_color = {
+            progress_cl : progressCl.value,
+            progress_bg:  progressBg.value,
+        };
         refresh();
     });
     
@@ -67,7 +73,13 @@
     }
     editor.set(initialJson1);
 
+    let dataColor = {
+        progress_cl : "#b3b3b3",
+        progress_bg: "#5f6067"
+    }
+
     window.DM_data = initialJson1;
+    window.DM_data_color = dataColor;
 
     refresh();
 

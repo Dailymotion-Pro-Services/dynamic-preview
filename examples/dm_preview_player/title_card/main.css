@@ -98,6 +98,15 @@ body, html{
   padding: 5px 10px;
 }
 
+.color-pick{
+  font-size: 15px;
+  height: 30px;
+}
+.color-item{
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+}
+
 
 .page-wrapper{
   width: 100%;
