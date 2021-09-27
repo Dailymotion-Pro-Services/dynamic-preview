@@ -35,8 +35,11 @@ You need to do 2 things to embed the Previews.
 
 ### Features:
 
-- Dailymotion Previews also provide features to customize the title and its CTA ( Call to Action ). By default clicking on a title will redirect to the Dailymotion video page.<p>&nbsp;</p>To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dmvs-apac.github.io/dynamic-preview/player#start-embedding).<p>&nbsp;</p>Data for title card can be set inside `<script type="application/json">` as `JSON` format.<p>&nbsp;</p>Here is an example.
-<p>&nbsp;</p>```html
+- Dailymotion Previews also provide features to customize the title and its CTA ( Call to Action ). By default clicking on a title will redirect to the Dailymotion video page.  
+To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dmvs-apac.github.io/dynamic-preview/player#start-embedding).  
+Data for title card can be set inside `<script type="application/json">` as `JSON` format.  
+Here is an example.
+```html
 <script type="application/json" id="dm_preview_text">
     {
         "title_card": [
@@ -51,8 +54,8 @@ You need to do 2 things to embed the Previews.
         ]
     }
 </script>
-```
-<p>&nbsp;</p>> As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
+```  
+> As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
 
 **Example:**
 - [Title CTA card - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/index.html)
