@@ -57,5 +57,16 @@ Here is an example.
 ```  
 > As you see above data, the title/CTA link of the video can be replaced from the default value where `video_id` is the `mandatory` field.
 
+- We provide [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to change the color of the porgress bar at the top the Dailymotion Previews.  
+Here is an example.  
+```CSS
+.dm-preview{
+    /* To change background color of progress bar */
+    --dm-preview-progress-bg: rgba(88, 89, 104,.5);
+    /* To change color of progress bar */
+    --dm-preview-progress-color: rgba(255,255,255,.5);
+}
+```
+
 **Example:**
 - [Title CTA card - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/index.html)
