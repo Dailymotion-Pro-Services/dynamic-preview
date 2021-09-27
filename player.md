@@ -59,7 +59,7 @@ Here is an example.
 
 - We provide [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to change the color of the porgress bar at the top the Dailymotion Previews.  
 Here is an example.  
-```CSS
+```css
 .dm-preview{
     /* To change background color of progress bar */
     --dm-preview-progress-bg: rgba(88, 89, 104,.5);
