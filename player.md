@@ -6,9 +6,9 @@ Dailymotion Previews are another implementation with [Dynamic Previews](https://
 
 You need to do 2 things to embed the Previews.
 
-1. Put the [script](https://staging.dmvs-apac.com/dm-preview-player/dm-preview.js) at the very bottom before `body` end in your website
+1. Put the [script](https://srvr.dmvs-apac.com/dm-preview/dm-preview.min.js) at the very bottom before `body` end in your website
 ```js
-<script src="https://staging.dmvs-apac.com/dm-preview-player/dm-preview.js"></script>
+<script src="https://srvr.dmvs-apac.com/dm-preview/dm-preview.min.js"></script>
 ```
 3. Add `<div class="dm-preview" `[{PARAMS}](#parameters-available)`></div>` in your target of body content.
 

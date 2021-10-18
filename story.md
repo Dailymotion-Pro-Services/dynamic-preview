@@ -9,9 +9,9 @@ You also need to create or find a playlist to embed for your story. Learn more o
 
 You need to do 2 things to embed the Player.
 
-1. Put the [script](https://staging.dmvs-apac.com/dmStory/dm-story.js) at the very bottom before `body` end in your website
+1. Put the [script](https://srvr.dmvs-apac.com/dm-stories/dm-stories.min.js) at the very bottom before `body` end in your website
 ```js
-<script src="https://staging.dmvs-apac.com/dmStory/dm-story.js"></script>
+<script src="https://srvr.dmvs-apac.com/dm-stories/dm-stories.min.js"></script>
 ```
 3. Add `<div class="dm-story" `[{PARAMS}](#parameters-available)`></div>` in your target of body content.
 
@@ -33,4 +33,4 @@ You need to do 2 things to embed the Player.
 | adsParams | string	 | To add custom ad prameters. Default value : `story` |
 
 ### Example Links
-- [DM Story demo](https://staging.dmvs-apac.com/dmStory/index.html)
+- [DM Story demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/index.html)
