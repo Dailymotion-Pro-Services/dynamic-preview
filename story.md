@@ -19,9 +19,8 @@ You need to do 2 things to embed the Player.
 ### Standard Embed Tag
 
 ```html
-<div class="dm-story" playlistId="{PLAYLIST_ID}" playerId="{PLAYER_ID}" style="height: 230px;"></div>
+<div class="dm-story" playlistId="{PLAYLIST_ID}" playerId="{PLAYER_ID}" ></div>
 ```
-> Add height to `dm-story` div as your requirements
 
 ### Parameters Available
 
@@ -30,7 +29,11 @@ You need to do 2 things to embed the Player.
 | playlistId <br /> `Mandatory` | string | Set playlist xid directly to the tag to embed playlist|
 | PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/x1wzpns/embed/players) in the player tab, inside the embed menu. |
 | numOfVideos | number | To specify number of videos in the playlist. Default value : `7` |
-| adsParams | string	 | To add custom ad prameters. Default value : `story` |
+| customParams | string | To add custom ad prameters. Default value : `story-lazy-preroll` |
+| baseStyle | string | You can set the base styling of Initially thumbnails of videos. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effect please check [examples below](#example-links)|
+
+
 
 ### Example Links
-- [DM Story demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/index.html)
+- [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
+- [DM Story grid](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/grid.html)
