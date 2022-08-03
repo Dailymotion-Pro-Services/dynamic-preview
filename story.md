@@ -32,6 +32,13 @@ You need to do 2 things to embed the Player.
 | customParams | string | To add custom ad prameters. Default value : `story-lazy-preroll` |
 | baseStyle | string | You can set the base styling of Initially thumbnails of videos. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effect please check [examples below](#example-links)|
 
+### Features:
+- To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. Be default it is set to `230px` for carousel and `400px` for grid base style.
+```css
+.dm-story{
+    --dm-item-height : 200px;
+}
+```
 
 
 ### Example Links
