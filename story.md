@@ -42,5 +42,5 @@ You need to do 2 things to embed the Player.
 
 
 ### Example Links
-- [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
-- [DM Story grid](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/grid.html)
+- [DM Story carousel](https://staging.dmvs-apac.com/dmStroy_new/lab/carousel.html)
+- [DM Story grid](https://staging.dmvs-apac.com/dmStroy_new/lab/grid.html)
