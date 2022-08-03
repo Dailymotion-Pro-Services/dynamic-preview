@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Sandpiper, bird, tweeting">
+
+    <title>Story: Grid style</title>
+    <style>
+      body{
+        margin: 0px;
+      }
+      .container{
+        max-width: 1080px;
+        height: 1500px;
+        margin: auto;
+        position: relative;
+      }
+      /* menu */
+      .menu{
+        height: 80px;
+        position: sticky;
+        margin-bottom: 30px;
+        top: 0px;
+        border-bottom: 1px solid #dbdbdb;
+        background: #fff;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 999;
+      }
+      .icon{
+        fill: #b3b2b2;
+        width: 40px;
+      }
+      .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      /* left-section */
+      .all-section{
+        width: 100%;
+      }
+      .para{
+        margin: 14px auto;
+        max-width: 980px;
+      }
+
+      @media only screen and (max-width: 1080px) {
+          body{
+            margin: 5px;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="menu">
+        <svg class="icon" viewBox="0 0 24 24" data-testid="MenuIcon">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </div>
+      <div class="section-wrapper">
+        <div class="all-section">
+          <div class="para">
+            <script type="application/json" id="dm_story_text">
+              {
+                "x8cjx3c" : {
+                  "cta_card" :{
+                    "text": "Read the article",
+                    "link": "www.example.com"
+                  }
+                }
+              }
+            </script>
+            <div class="dm-story" playlistId="x7ji0g" numOfVideos="15" baseStyle="grid" playerId="x3oz8"></div> 
+            <script src="https://srvr.dmvs-apac.com/dm-stories/dm-stories.min.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</body>
+</html>
+
+
