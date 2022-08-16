@@ -9,9 +9,9 @@ You also need to create or find a playlist to embed for your story. Learn more o
 
 You need to do 2 things to embed the Player.
 
-1. Put the [script](https://srvr.dmvs-apac.com/dm-stories/dm-stories.min.js) at the very bottom before `body` end in your website
+1. Put the [script](https://srvr.dmvs-apac.com/dm-story/dm-story.min.js) at the very bottom before `body` end in your website
 ```js
-<script src="https://srvr.dmvs-apac.com/dm-stories/dm-stories.min.js"></script>
+<script src="https://srvr.dmvs-apac.com/dm-story/dm-story.min.js"></script>
 ```
 3. Add `<div class="dm-story" `[{PARAMS}](#parameters-available)`></div>` in your target body content.
 
@@ -42,5 +42,5 @@ You need to do 2 things to embed the Player.
 
 
 ### Example Links
-- [DM Story carousel](https://staging.dmvs-apac.com/dmStroy_new/lab/carousel.html)
-- [DM Story grid](https://staging.dmvs-apac.com/dmStroy_new/lab/grid.html)
+- [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
+- [DM Story grid](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/grid.html)
