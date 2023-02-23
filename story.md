@@ -41,7 +41,26 @@ You need to do 2 things to embed the Player.
     --dm-item-height : 200px;
 }
 ```
+### Events:
 
+Dailymotion Story provide some [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) on `document` to inform special activity.
+
+### Example : 
+```html
+<script>
+    // When Dailymotion story enter fullscreen mode
+    document.addEventListener("dm-story-enter-fullscreen",()=>{
+        // do something after story enter the fullscreen
+    })
+</script>
+```
+
+### Events : 
+
+| Name | Type | Info | Description |
+| :---: | :---: | :---: |--- |
+| `dm-story-enter-fullscreen` | CustomEvent | Fire when Dailymotion story enter fullscreen mode. |
+| `dm-story-exit-fullscreen` | CustomEvent | Fire when Dailymotion story exit fullscreen mode. |
 
 ### Example Links
 - [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
