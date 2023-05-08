@@ -5,6 +5,8 @@ To use Dailymotion Story you must create a player first through [Partner HQ](htt
 
 > Disable player queue, player controls and PIP from player settings
 
+> Set player "AutoStart" on
+
 You also need to create or find a playlist to embed for your story. Learn more on [how to create, sort, feed and embed playlist](https://faq.dailymotion.com/hc/en-us/sections/360003674799-Playlist). When you are finished, add the `{PLAYLIST_ID}` to your embed code below.
 
 ### Start Embedding
