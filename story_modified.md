@@ -43,10 +43,10 @@ You need to do 2 things to embed the Player.
 .dm-story{
     --dm-item-height : 200px;
 }
+```
 
 - You can change svg of share and mute button by predefined css variable.
 -- `--dmstory-share-button-path` to update share button
-```
 ### Events:
 
 Dailymotion Story provide some [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) on `document` to inform special activity.
