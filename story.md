@@ -3,7 +3,7 @@
 To use Dailymotion Story you must create a player first through [Partner HQ](https://www.dailymotion.com/partner/x1wzpns/embed/players) and get the `{PLAYER_ID}`.
 > Set the player's Aspect ratio as `9:16` in the player creation menu.
 
-> Disable player queue, player controls, and PIP from player settings
+> Disable First-time viewable, Automatic recommendations, Autonext, player controls, and PIP from player settings
 
 > Set player "AutoStart" on
 
