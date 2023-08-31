@@ -33,9 +33,21 @@ You need to do 2 things to embed the Player.
 | playlistId <br /> `Mandatory` | string | Set playlist `xid` directly to the tag to embed playlist|
 | PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. |
 | numOfVideos | number | To specify the number of videos in the playlist. Default value: `7` |
-| customParams | string | To add a declarative parameter. Default value: `story-lazy-preroll` |
 | baseStyle | string | You can set the base styling of your video thumbnail gallery. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effects, please check [examples below](#example-links)|
 | thumbnail | string | You can set thumbnail resolution. Available values are [here](https://developers.dailymotion.com/api/#playlist-thumbnail_60_url-field). By default, it is `thumbnail_480_url`|
+| customConfig | string | To add advertising Config to pass unique keys for advertising purposes. You can add multiple values. See the embed example below. |
+
+### Embed Example :
+```html
+<div class="dm-story"
+   playerId="xxxx"
+   numOfVideos="10"
+   baseStyle="carousel"
+   thumbnail="thumbnail_360_url"
+   customConfig="[dynamiciu]=23328537%2FAdParams_Test;[keyvalues]=category%3Dsports%26section%3Dvideo"
+></div>
+```
+In the sample above for customConfig value you realized there are text %2f, %3d, and %26. All of that number is a URL encoding. That’s actually a character of /, =, and &. You can visit this URL encoding link for a complete list.
 
 ### Features:
 - To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. By default, it is set to `230px` for the carousel and `400px` for the grid base style.
