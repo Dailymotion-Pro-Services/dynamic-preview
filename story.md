@@ -47,10 +47,10 @@ You need to do 2 things to embed the Player.
    customConfig="[dynamiciu]=23328537%2FAdParams_Test;[keyvalues]=category%3Dsports%26section%3Dvideo"
 ></div>
 ```
-In the sample above for customConfig value, you realized there are text %2f, %3d, and %26. All of that number is a URL encoding. That’s a character of /, =, and &. You can visit this URL encoding link for a complete list.
+In the sample above for customConfig value, you can see the following text: %2f, %3d, and %26. These bits of text represent URL encoding, standing respectively for special characters /, =, and &. You can visit this [URL encoding reference]([url](https://www.w3schools.com/tags/ref_urlencode.ASP)) for a complete list.
 
 ### Features:
-- The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
+- The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
 ```html
 <script type="application/json" id="dm_story_text">
   {
@@ -87,7 +87,7 @@ In the sample above for customConfig value, you realized there are text %2f, %3d
     --dmstory-muteoff-button-path : path('M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z');
 }
 ```
-- You can modify the style of many features/buttons by selecting classes. For more Please contact [DPS team](professional-services@dailymotion.com).
+- You can modify the style of many features/buttons by selecting classes. For more info, please contact [Dailymotion Professional Services team](professional-services@dailymotion.com).
 ```css
 /*Changing color of CTA button */
 .dm-story .dm-story-cta-button{
@@ -97,7 +97,7 @@ In the sample above for customConfig value, you realized there are text %2f, %3d
 
 ### Setting `customConfig` dynamically: 
 
-Dailymotion story provides a way to set two different `customCofig` based on the position of the video in the story. Below the example shows how it can be achieved
+Dailymotion story provides a way to set two different `customConfig` based on the position of the video in the story. Below, the example shows how it can be achieved
 ```html
 <script type="application/json" id="dm_story_text">
   {
@@ -110,8 +110,8 @@ Dailymotion story provides a way to set two different `customCofig` based on the
 <div class="dm-story" playlistId="x6hzyp" numOfVideos="10" playerId="xfgl5" customConfig="[premium]=false"></div> 
 ```
 As you can see in the embed code, `"[premium]=false"` is the default value of customConfig for all videos in the story. `"[premium]=true"` will be applied to those videos having positions `2`, `4` and so on. The position of the first video of the story is always considered `1`.
-We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html) in staging with the above configuration. Please contact us([Professional-Services
-](mailto:professional-services@dailymotion.com)) for partner specific request.
+We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html) in staging with the above configuration. Please contact us ([Dailymotion Professional-Services
+](mailto:professional-services@dailymotion.com)) for partner specific requests.
 
 ### Events:
 
