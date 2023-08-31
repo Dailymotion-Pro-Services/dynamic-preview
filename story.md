@@ -116,8 +116,7 @@ We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html)
 ### Events:
 
 Dailymotion Story provides some [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) on `document` to inform special activity.
-
-### Example : 
+Example : 
 ```html
 <script>
     // When the Dailymotion story enters fullscreen mode
@@ -127,7 +126,7 @@ Dailymotion Story provides some [CustomEvents](https://developer.mozilla.org/en-
 </script>
 ```
 
-### Events : 
+### Events Available: 
 
 | Name | Type | Info | Description |
 | :---: | :---: | :---: |--- |
