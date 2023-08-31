@@ -13,7 +13,7 @@ You also need to create or find a playlist to embed for your story. Learn more o
 
 You need to do 2 things to embed the Player.
 
-1. Put the [script](https://srvr.dmvs-apac.com/dm-story/dm-story.min.js) at the very bottom before the `body` end in your website
+1. Put the [script](https://srvr.dmvs-apac.com/dm-story/dm-story.min.js) at the very bottom before the `body` ends in your website
 ```js
 <script src="https://srvr.dmvs-apac.com/dm-story/dm-story.min.js"></script>
 ```
@@ -47,9 +47,30 @@ You need to do 2 things to embed the Player.
    customConfig="[dynamiciu]=23328537%2FAdParams_Test;[keyvalues]=category%3Dsports%26section%3Dvideo"
 ></div>
 ```
-In the sample above for customConfig value you realized there are text %2f, %3d, and %26. All of that number is a URL encoding. That’s actually a character of /, =, and &. You can visit this URL encoding link for a complete list.
+In the sample above for customConfig value, you realized there are text %2f, %3d, and %26. All of that number is a URL encoding. That’s a character of /, =, and &. You can visit this URL encoding link for a complete list.
 
 ### Features:
+- The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
+```html
+<script type="application/json" id="dm_story_text">
+  {
+    "x8cjx3c" : {
+      "cta_card" :{
+        "text": "Read the article",
+        "link": "www.example.com"
+      }
+    },
+    "x8cjx34" : {
+      "cta_card" :{
+        "text": "Explore more",
+        "link": "www.example3.com"
+      }
+    }
+  }
+</script>
+```
+> CTA buttons are implemented in [the example pages](#example-links) as a demo.
+
 - To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. By default, it is set to `230px` for the carousel and `400px` for the grid base style.
 ```css
 .dm-story{
@@ -73,6 +94,25 @@ In the sample above for customConfig value you realized there are text %2f, %3d,
     background: #ae3a0c !important;
 }
 ```
+
+### Setting `customConfig` dynamically: 
+
+Dailymotion story provides a way to set two different `customCofig` based on the position of the video in the story. Bbove the example shows how it can be achieved
+```html
+<script type="application/json" id="dm_story_text">
+  {
+      "customConfig":{
+         "value": "[premium]=true",
+         "position": [2,4,7,10]
+       }
+  }
+</script>
+<div class="dm-story" playlistId="x6hzyp" numOfVideos="10" playerId="xfgl5" customConfig="[premium]=false"></div> 
+```
+As you can see in the embed code, `"[premium]=false"` is the default value of customConfig for all videos in the story. `"[premium]=true"` will be applied to those videos having positions `2`, `4` and so on. The position of the first video of the story is always considered `1`.
+We have a (demo)[https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html] in staging with the above configuration. Please contact us[Professional-Services
+](mailto:professional-services@dailymotion.com) for partner specific request.
+
 ### Events:
 
 Dailymotion Story provides some [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) on `document` to inform special activity.
