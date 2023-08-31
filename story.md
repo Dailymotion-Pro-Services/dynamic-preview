@@ -110,8 +110,8 @@ Dailymotion story provides a way to set two different `customCofig` based on the
 <div class="dm-story" playlistId="x6hzyp" numOfVideos="10" playerId="xfgl5" customConfig="[premium]=false"></div> 
 ```
 As you can see in the embed code, `"[premium]=false"` is the default value of customConfig for all videos in the story. `"[premium]=true"` will be applied to those videos having positions `2`, `4` and so on. The position of the first video of the story is always considered `1`.
-We have a (demo)[https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html] in staging with the above configuration. Please contact us[Professional-Services
-](mailto:professional-services@dailymotion.com) for partner specific request.
+We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html) in staging with the above configuration. Please contact us([Professional-Services
+](mailto:professional-services@dailymotion.com)) for partner specific request.
 
 ### Events:
 
