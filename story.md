@@ -97,7 +97,7 @@ In the sample above for customConfig value, you realized there are text %2f, %3d
 
 ### Setting `customConfig` dynamically: 
 
-Dailymotion story provides a way to set two different `customCofig` based on the position of the video in the story. Bbove the example shows how it can be achieved
+Dailymotion story provides a way to set two different `customCofig` based on the position of the video in the story. Below the example shows how it can be achieved
 ```html
 <script type="application/json" id="dm_story_text">
   {
