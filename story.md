@@ -113,6 +113,17 @@ As you can see in the embed code, `"[premium]=false"` is the default value of cu
 We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html) in staging with the above configuration. Please contact us ([Dailymotion Professional-Services
 ](mailto:professional-services@dailymotion.com)) for partner specific requests.
 
+
+### Lazy Loading Enhancement
+
+We've introduced Lazy Loading for image thumbnails in the card component to enhance performance. This implementation aligns with Core Web Vitals guidelines. No action is required on your part. If your story is located below the visible part of the webpage (below the fold), the image will automatically load in a lazy manner.
+
+
+### Search Engine Friendly HTML Structure
+
+To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action.
+
+
 ### Events:
 
 Dailymotion Story provides some [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) on `document` to inform special activity.
