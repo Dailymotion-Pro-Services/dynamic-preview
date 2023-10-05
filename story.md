@@ -116,12 +116,12 @@ We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html)
 
 ### Lazy Loading Enhancement
 
-We've introduced Lazy Loading for image thumbnails in the card component to enhance performance. This implementation aligns with Core Web Vitals guidelines. No action is required on your part. If your story is located below the visible part of the webpage (below the fold), the image will automatically load in a lazy manner.
+We've introduced Lazy Loading for image thumbnails in the card component to enhance performance. This implementation aligns with Core Web Vitals guidelines. No action is required on your part. If your story is located below the visible part of the webpage (below the fold), the image will automatically load in a lazy manner. You also can read to the official documentation [here](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)
 
 
 ### Search Engine Friendly HTML Structure
 
-To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action.
+To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action. Click this [link](https://developers.google.com/search/docs/crawling-indexing) to know further the overview on how search engine crawling and indexing our website.
 
 
 ### Events:
