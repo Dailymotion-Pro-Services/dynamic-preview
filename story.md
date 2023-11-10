@@ -52,7 +52,8 @@ In the sample above for customConfig value, you can see the following text: %2f,
 ## Features:
 
 ### CTA button:
-The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
+
+The Dailymotion Story provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
 ```html
 <script type="application/json" id="dm_story_text">
   {
@@ -74,6 +75,7 @@ The Dailymotion Story also provides a feature to add CTA (Call to Action) button
 > CTA buttons are implemented in [the example pages](#example-links) as a demo.
 
 ### Customizing styles:
+
 - To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. By default, it is set to `230px` for the carousel and `400px` for the grid base style.
 ```css
 .dm-story{
@@ -99,6 +101,7 @@ The Dailymotion Story also provides a feature to add CTA (Call to Action) button
    ```
 
 ### Setting `customConfig` dynamically: 
+
 Dailymotion story provides a way to set two different `customConfig` based on the position of the video in the story. Below, the example shows how it can be achieved
 ```html
 <script type="application/json" id="dm_story_text">
@@ -116,16 +119,69 @@ We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html)
 ](mailto:professional-services@dailymotion.com)) for partner specific requests.
 
 
-### Lazy Loading Enhancement
+### Lazy Loading Enhancement:
 
 We've introduced Lazy Loading for image thumbnails in the card component to enhance performance. This implementation aligns with Core Web Vitals guidelines. No action is required on your part. If your story is located below the visible part of the webpage (below the fold), the image will automatically load in a lazy manner. You also can read to the official documentation [here](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)
 
 
-### Search Engine Friendly HTML Structure
+### Search Engine Friendly HTML Structure:
 
 To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action. Click this [link](https://developers.google.com/search/docs/crawling-indexing) to know further the overview on how search engine crawling and indexing our website.
 
-______
+### Interstitial Ads:
+
+Web banner or banner ad can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with `close ad` button which close the ad and play the video of the current slide. You can target any slide based on their indexes ( starts from `0` ). Here is an example of showing interstitial ads for slide `3`,`5`,`7`,`...`.
+
+```html
+
+<script>
+  window.DailymotionStory = {};
+  // to activate interstitial ads
+  window.DailymotionStory.interstitialAds = {
+      // set condition for slide index
+      condition : (index) =>{
+          if( index%2 == 0 ){
+              return true;
+          }else {
+              return false;
+          }
+      },
+      /**
+       * @description :  if condition satisfied, story will create
+       * adContainer then call this function
+       * 
+       * @param {HTMLElement} adContainer a htmlElement object for ads
+       * @param {number} index slide index value, starts from 0
+       */
+      onCondition: (adContainer,index)=> {
+          console.log(index);
+          // add html for ads
+          /**
+           * example : 
+           *  adContainer.innerHTML = `<div id="newswell-side-1" style="width: 300px; height: 250px;"></div>`;
+           */
+          // trigger the ad
+          /**
+           * example : 
+           *    (adsbygoogle = window.adsbygoogle || []).push({});
+           *     googletag.cmd.push(function() {
+           *          googletag.display('newswell-side-1');
+           *     });
+           */
+      }
+  }
+</script>
+
+```
+> `window.DailymotionStory` is a global object that will be checked from story script if present on the page.
+
+> `window.DailymotionStory.interstitialAds` is to setup the interstitialAds.
+>
+>> `condition: condition for slide  ( condition )
+
+onCondition  : provide a function with  adContainer .
+index%2 == 0  is a condition that can be customized
+adContainer is HtmlElement container where the ads html part can be attached. After that, it can be triggered if needed.
 
 ### Events:
 
