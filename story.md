@@ -177,7 +177,7 @@ Web banner or banner ad can be added dynamically over a side in the fullscreen m
 
 > `window.DailymotionStory.interstitialAds` is to setup the interstitialAds.
 >
->> `condition: condition for slide  ( condition )
+> - `condition: condition for slide  ( condition )
 
 onCondition  : provide a function with  adContainer .
 index%2 == 0  is a condition that can be customized
