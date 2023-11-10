@@ -49,7 +49,8 @@ You need to do 2 things to embed the Player.
 ```
 In the sample above for customConfig value, you can see the following text: %2f, %3d, and %26. These bits of text represent URL encoding, standing respectively for special characters /, =, and &. You can visit this [URL encoding reference]([url](https://www.w3schools.com/tags/ref_urlencode.ASP)) for a complete list.
 
-### Features:
+## Features:
+
 - The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
 ```html
 <script type="application/json" id="dm_story_text">
