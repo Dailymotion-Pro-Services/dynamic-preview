@@ -182,7 +182,7 @@ Web banners or banner ads can be added dynamically over a side in the fullscreen
 > - `onCondition` is a callback function invoked when the provided condition is satisfied. You can use it to set up your ads. It has an adContainer and index (current slide's index) as parameters.
 >    - `adContainer` is an HtmlElement container where the ad's HTML part can be attached. After that, it can be triggered if needed as shown above in the example code block.
 
-> you can also check out a demo of [interstitial ads](https://staging.dmvs-apac.com/dmStory/lab/interstitial-ads.html).
+> you can also check out this demo of [interstitial ads](https://staging.dmvs-apac.com/dmStory/lab/interstitial-ads.html).
 
 ### Events:
 
