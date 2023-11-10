@@ -130,7 +130,7 @@ To enhance crawlability, we've restructured our HTML to be more search engine-fr
 
 ### Interstitial Ads:
 
-Web banner or banner ad can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with `close ad` button which close the ad and play the video of the current slide. You can target any slide based on their indexes ( starts from `0` ). Here is an example of showing interstitial ads for slide `3`,`5`,`7`,`...`.
+Web banners or banner ads can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with a `close ad` button which enables you to close the ad and play the video of the current slide. You can target any slide based on their indexes (starting from `0` ). Here is an example of showing interstitial ads for slides `3`,`5`,`7`,`...`.
 
 ```html
 
@@ -173,14 +173,14 @@ Web banner or banner ad can be added dynamically over a side in the fullscreen m
 </script>
 
 ```
-> `window.DailymotionStory` is a global object that will be checked from story script if present on the page.
+> `window.DailymotionStory` is a global object that will be checked from the story script if present on the page.
 
-> `window.DailymotionStory.interstitialAds` is to setup the interstitialAds.
+> `window.DailymotionStory.interstitialAds` is to set up the interstitialAds.
 >
-> - `condition` function where you can set condition to target slides. It invokes everytime when you go to new slide giving the current `index`.
-> -- `index%2 == 0`  is an example of a condition that can be customized
-> - `onCondition` is a callback function invokes when the provided condition is satisfied. You can use to set up your ads. It has adContainer and index (current slide's index).
-> -- `adContainer` is HtmlElement container where the ad's html part can be attached. After that, it can be triggered if needed. like shows above in example code block.
+> - `condition` function where you can set conditions to target slides. It invokes every time you go to a new slide giving the current `index`. It has a parameter `index` of the current slide.
+>    - `index%2 == 0`  is an example of a condition that can be customized
+> - `onCondition` is a callback function invoked when the provided condition is satisfied. You can use it to set up your ads. It has an adContainer and index (current slide's index) as parameters.
+>    - `adContainer` is an HtmlElement container where the ad's HTML part can be attached. After that, it can be triggered if needed as shown above in the example code block.
 
 
 
