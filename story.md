@@ -125,7 +125,7 @@ We've introduced Lazy Loading for image thumbnails in the card component to enha
 
 To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action. Click this [link](https://developers.google.com/search/docs/crawling-indexing) to know further the overview on how search engine crawling and indexing our website.
 
-<hr style="border:1px solid gray">
+"-----"
 
 ### Events:
 
