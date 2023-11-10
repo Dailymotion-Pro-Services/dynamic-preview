@@ -51,7 +51,9 @@ In the sample above for customConfig value, you can see the following text: %2f,
 
 ## Features:
 
-- The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
+### CTA button:
+
+The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
 ```html
 <script type="application/json" id="dm_story_text">
   {
@@ -72,6 +74,8 @@ In the sample above for customConfig value, you can see the following text: %2f,
 ```
 > CTA buttons are implemented in [the example pages](#example-links) as a demo.
 
+### Customizing styles:
+
 - To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. By default, it is set to `230px` for the carousel and `400px` for the grid base style.
 ```css
 .dm-story{
@@ -89,12 +93,12 @@ In the sample above for customConfig value, you can see the following text: %2f,
 }
 ```
 - You can modify the style of many features/buttons by selecting classes. For more info, please contact [Dailymotion Professional Services team](mailto:professional-services@dailymotion.com).
-```css
-/*Changing color of CTA button */
-.dm-story .dm-story-cta-button{
-    background: #ae3a0c !important;
-}
-```
+   ```css
+   /*Changing color of CTA button */
+   .dm-story .dm-story-cta-button{
+       background: #ae3a0c !important;
+   }
+   ```
 
 ### Setting `customConfig` dynamically: 
 
