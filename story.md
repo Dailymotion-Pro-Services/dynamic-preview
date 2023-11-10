@@ -177,11 +177,12 @@ Web banner or banner ad can be added dynamically over a side in the fullscreen m
 
 > `window.DailymotionStory.interstitialAds` is to setup the interstitialAds.
 >
-> - `condition: condition for slide  ( condition )
+> - `condition` function where you can set condition to target slides. It invokes everytime when you go to new slide giving the current `index`.
+> -- `index%2 == 0`  is an example of a condition that can be customized
+> - `onCondition` is a callback function invokes when the provided condition is satisfied. You can use to set up your ads. It has adContainer and index (current slide's index).
+> -- `adContainer` is HtmlElement container where the ad's html part can be attached. After that, it can be triggered if needed. like shows above in example code block.
 
-onCondition  : provide a function with  adContainer .
-index%2 == 0  is a condition that can be customized
-adContainer is HtmlElement container where the ads html part can be attached. After that, it can be triggered if needed.
+
 
 ### Events:
 
