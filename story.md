@@ -130,7 +130,7 @@ To enhance crawlability, we've restructured our HTML to be more search engine-fr
 
 ### Interstitial Ads:
 
-Web banners or banner ads can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with a `close ad` button which enables you to close the ad and play the video of the current slide. You can target any slide based on their indexes (starting from `0` ). Here is an example of showing interstitial ads for slides `3`,`5`,`7`,`...`.
+Web banners or banner ads can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with a `close ad` button which lets you close the ad and play the video of the current slide. You can target any slide based on their indexes (starting from `0` ). Here is an example of showing interstitial ads for slides `3`,`5`,`7`,`...`.
 
 ```html
 
@@ -175,7 +175,7 @@ Web banners or banner ads can be added dynamically over a side in the fullscreen
 ```
 > `window.DailymotionStory` is a global object that will be checked from the story script if present on the page.
 
-> `window.DailymotionStory.interstitialAds` is to set up the interstitialAds.
+> `window.DailymotionStory.interstitialAds` is used to set up the interstitialAds.
 >
 > - `condition` function where you can set conditions to target slides. It invokes every time you go to a new slide giving the current `index`. It has a parameter `index` of the current slide.
 >    - `index%2 == 0`  is an example of a condition that can be customized
