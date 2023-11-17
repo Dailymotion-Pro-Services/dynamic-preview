@@ -49,8 +49,11 @@ You need to do 2 things to embed the Player.
 ```
 In the sample above for customConfig value, you can see the following text: %2f, %3d, and %26. These bits of text represent URL encoding, standing respectively for special characters /, =, and &. You can visit this [URL encoding reference]([url](https://www.w3schools.com/tags/ref_urlencode.ASP)) for a complete list.
 
-### Features:
-- The Dailymotion Story also provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
+## Features:
+
+### CTA button:
+
+The Dailymotion Story provides a feature to add CTA (Call to Action) button over the content of the video. To add CTA button you need to add `<script type="application/json" id="dm_story_text">` tag before [embed code for Stories](#start-embedding). Data for CTA button can be set inside `<script type="application/json">` as JSON format. Here is an example,
 ```html
 <script type="application/json" id="dm_story_text">
   {
@@ -71,6 +74,8 @@ In the sample above for customConfig value, you can see the following text: %2f,
 ```
 > CTA buttons are implemented in [the example pages](#example-links) as a demo.
 
+### Customizing styles:
+
 - To change the default height of thumbnails, we provide a CSS variable `--dm-item-height`. By default, it is set to `230px` for the carousel and `400px` for the grid base style.
 ```css
 .dm-story{
@@ -88,12 +93,12 @@ In the sample above for customConfig value, you can see the following text: %2f,
 }
 ```
 - You can modify the style of many features/buttons by selecting classes. For more info, please contact [Dailymotion Professional Services team](mailto:professional-services@dailymotion.com).
-```css
-/*Changing color of CTA button */
-.dm-story .dm-story-cta-button{
-    background: #ae3a0c !important;
-}
-```
+   ```css
+   /*Changing color of CTA button */
+   .dm-story .dm-story-cta-button{
+       background: #ae3a0c !important;
+   }
+   ```
 
 ### Setting `customConfig` dynamically: 
 
@@ -114,15 +119,70 @@ We have a [demo](https://staging.dmvs-apac.com/dmStory/lab/carousel_adtest.html)
 ](mailto:professional-services@dailymotion.com)) for partner specific requests.
 
 
-### Lazy Loading Enhancement
+### Lazy Loading Enhancement:
 
 We've introduced Lazy Loading for image thumbnails in the card component to enhance performance. This implementation aligns with Core Web Vitals guidelines. No action is required on your part. If your story is located below the visible part of the webpage (below the fold), the image will automatically load in a lazy manner. You also can read to the official documentation [here](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)
 
 
-### Search Engine Friendly HTML Structure
+### Search Engine Friendly HTML Structure:
 
 To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action. Click this [link](https://developers.google.com/search/docs/crawling-indexing) to know further the overview on how search engine crawling and indexing our website.
 
+### Interstitial Ads:
+
+Web banners or banner ads can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with a `close ad` button which lets you close the ad and play the video of the current slide. You can target any slide based on their indexes (starting from `0` ). Here is an example of showing interstitial ads for slides `3`,`5`,`7`,`...`.
+
+```html
+
+<script>
+  window.DailymotionStory = {};
+  // to activate interstitial ads
+  window.DailymotionStory.interstitialAds = {
+      // set condition for slide index
+      condition : (index) =>{
+          if( index%2 == 0 ){
+              return true;
+          }else {
+              return false;
+          }
+      },
+      /**
+       * @description :  if condition satisfied, story will create
+       * adContainer then call this function
+       * 
+       * @param {HTMLElement} adContainer a htmlElement object for ads
+       * @param {number} index slide index value, starts from 0
+       */
+      onCondition: (adContainer,index)=> {
+          console.log(index);
+          // add html for ads
+          /**
+           * example : 
+           *  adContainer.innerHTML = `<div id="newswell-side-1" style="width: 300px; height: 250px;"></div>`;
+           */
+          // trigger the ad
+          /**
+           * example : 
+           *    (adsbygoogle = window.adsbygoogle || []).push({});
+           *     googletag.cmd.push(function() {
+           *          googletag.display('newswell-side-1');
+           *     });
+           */
+      }
+  }
+</script>
+
+```
+> `window.DailymotionStory` is a global object that will be checked from the story script if present on the page.
+
+> `window.DailymotionStory.interstitialAds` is used to set up the interstitialAds.
+>
+> - `condition` function where you can set conditions to target slides. It invokes every time you go to a new slide giving the current `index`. It has a parameter `index` of the current slide.
+>    - `index%2 == 0`  is an example of a condition that can be customized
+> - `onCondition` is a callback function invoked when the provided condition is satisfied. You can use it to set up your ads. It has an adContainer and index (current slide's index) as parameters.
+>    - `adContainer` is an HtmlElement container where the ad's HTML part can be attached. After that, it can be triggered if needed as shown above in the example code block.
+
+> you can also check out this demo of [interstitial ads](https://staging.dmvs-apac.com/dmStory/lab/interstitial-ads.html).
 
 ### Events:
 
@@ -147,3 +207,4 @@ Example :
 ### Example Links
 - [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
 - [DM Story grid](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/grid.html)
+- [DM Story grid interstitial Ads](https://staging.dmvs-apac.com/dmStory/lab/interstitial-ads.html)
