@@ -33,6 +33,7 @@ You need to do 2 things to embed the Player.
 | playlistId <br /> `Mandatory` | string | Set playlist `xid` directly to the tag to embed playlist|
 | PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. |
 | numOfVideos | number | To specify the number of videos in the playlist. Default value: `7` |
+| scrollBy | number | To specify the number of slides to move at once in inline carousel. |
 | baseStyle | string | You can set the base styling of your video thumbnail gallery. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effects, please check [examples below](#example-links)|
 | thumbnail | string | You can set thumbnail resolution. Available values are [here](https://developers.dailymotion.com/api/#playlist-thumbnail_60_url-field). By default, it is `thumbnail_480_url`|
 | customConfig | string | To add advertising Config to pass unique keys for advertising purposes. You can add multiple values. See the embed example below. |
