@@ -37,6 +37,7 @@ You need to do 2 things to embed the Player.
 | baseStyle | string | You can set the base styling of your video thumbnail gallery. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effects, please check [examples below](#example-links)|
 | thumbnail | string | You can set thumbnail resolution. Available values are [here](https://developers.dailymotion.com/api/#playlist-thumbnail_60_url-field). By default, it is `thumbnail_480_url`|
 | customConfig | string | To add advertising Config to pass unique keys for advertising purposes. You can add multiple values. See the embed example below. |
+| dmPubtool | string | To add dmPubtool value to the player. By default, it is `pes-customembed-story`. |
 
 ### Embed Example :
 ```html
