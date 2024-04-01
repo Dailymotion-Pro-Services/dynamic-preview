@@ -1,4 +1,4 @@
-# Connect player from Custom Embed to Google Analytics 4 (GA4) :
+# Connect player from Dailymotion Story to Google Analytics 4 (GA4) :
 
 > [!IMPORTANT]  
 > Following this documentation is about providing extra steps that you need for connecting your player in [Dailymotion Story
