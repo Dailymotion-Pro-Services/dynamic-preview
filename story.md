@@ -31,7 +31,7 @@ You need to do 2 things to embed the Player.
 | Name | Type | Description |
 | :---: | :---: | --- |
 | playlistId <br /> `Mandatory` | string | Set playlist `xid` directly to the tag to embed playlist|
-| PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. You can also set up a secondary `{PLAYER_ID}` in case the player gets flagged by Google Heavy Ads Intervention. [Learn more](). |
+| PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. You can also set up a secondary `{PLAYER_ID}` in case the player gets flagged by Google Heavy Ads Intervention. [Learn more](#manage-player-flagged-by-heavy-ads-). |
 | numOfVideos | number | To specify the number of videos in the playlist. Default value: `7` |
 | scrollBy | number | To specify the number of slides to move at once in inline carousel. |
 | baseStyle | string | You can set the base styling of your video thumbnail gallery. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effects, please check [examples below](#example-links)|
@@ -138,6 +138,10 @@ If player is flagged by Heavy Ad, Dailymotion throws an event `PLAYER_HEAVYADSIN
 Hence for the Dailymotion Story, we recommends always using two `PLAYER_ID` for `playerId` attribute. The second `PLAYER_ID` will be used for Heavy Ad Intervention.
 
 In the absence of a second `PLAYER_ID`, Dailymotion Story will instead load a universal player library i.e., [player.js](https://geo.dailymotion.com/libs/player.js) for Heavy Ad Intervention.
+
+```html
+<div class="dm-story" playlistId="{PLAYLIST_ID}" playerId="{PLAYER_ID_1},{PLAYER_ID_2}" ></div>
+```
 
 ### Interstitial Ads:
 
