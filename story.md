@@ -209,7 +209,7 @@ Example :
     document.addEventListener("dm-story-enter-fullscreen",()=>{
         //Do something after the story enter the fullscreen
     });
-    // get player object when custom embed creates a player
+    // get player object when dm story creates a player
     document.addEventListener("dmstory-player-create",(e)=>{
         console.log(e.detail); // {player: playerObject}
     })
