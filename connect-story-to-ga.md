@@ -11,7 +11,7 @@ With the help of [Events in Dailymotion Story](https://dmvs-apac.github.io/dynam
 ### Example : 
 ```html
 <script>
-    // get player object when custom embed creates a player
+    // get player object when dm story creates a player
     document.addEventListener("dmstory-player-create",(e)=>{
         console.log(e.detail); // {player: playerObject}
         DM_GTM_INIT(e.detail.player); // connecting player to GMT script
