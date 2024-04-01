@@ -31,7 +31,7 @@ You need to do 2 things to embed the Player.
 | Name | Type | Description |
 | :---: | :---: | --- |
 | playlistId <br /> `Mandatory` | string | Set playlist `xid` directly to the tag to embed playlist|
-| PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. |
+| PlayerId <br /> `Mandatory` | string | You can get `{PLAYER_ID}` from [Dailymotion partner HQ](https://www.dailymotion.com/partner/embed/players) in the player tab, inside the embed menu. You can also set up a secondary `{PLAYER_ID}` in case the player gets flagged by Google Heavy Ads Intervention. [Learn more](). |
 | numOfVideos | number | To specify the number of videos in the playlist. Default value: `7` |
 | scrollBy | number | To specify the number of slides to move at once in inline carousel. |
 | baseStyle | string | You can set the base styling of your video thumbnail gallery. The default value is `carousel`  i.e., thumbnails will show as a carousel. Or you can set it to `grid` style. To visualize the effects, please check [examples below](#example-links)|
@@ -130,6 +130,15 @@ We've introduced Lazy Loading for image thumbnails in the card component to enha
 
 To enhance crawlability, we've restructured our HTML to be more search engine-friendly. You can simply sit back and enjoy the benefits without needing to take any action. Click this [link](https://developers.google.com/search/docs/crawling-indexing) to know further the overview on how search engine crawling and indexing our website.
 
+### Manage player flagged by Heavy Ads :
+> In 2020 Google introduced various measures for regulating online advertising in the Google Chrome browser. The Heavy Ad Intervention feature was released in order to identify and unload online ads that are deemed as 'heavy'. [Learn more](https://faq.dailymotion.com/hc/en-us/articles/4414693854738-Manage-player-integration-flagged-by-Heavy-Ad) .
+
+If player is flagged by Heavy Ad, Dailymotion throws an event `PLAYER_HEAVYADSINTERVENTION`. Using that event, Dailymotion Story will try to load the player again. **Loading again the player bypasses the heavy ad most of the time but not always**.
+
+Hence for the Dailymotion Story, we recommends always using two `PLAYER_ID` for `playerId` attribute. The second `PLAYER_ID` will be used for Heavy Ad Intervention.
+
+In the absence of a second `PLAYER_ID`, Dailymotion Story will instead load a universal player library i.e., [player.js](https://geo.dailymotion.com/libs/player.js) for Heavy Ad Intervention.
+
 ### Interstitial Ads:
 
 Web banners or banner ads can be added dynamically over a side in the fullscreen mode of the dailymotion story. It comes with a `close ad` button which lets you close the ad and play the video of the current slide. You can target any slide based on their indexes (starting from `0` ). Here is an example of showing interstitial ads for slides `3`,`5`,`7`,`...`.
@@ -195,6 +204,10 @@ Example :
     // When the Dailymotion story enters fullscreen mode
     document.addEventListener("dm-story-enter-fullscreen",()=>{
         //Do something after the story enter the fullscreen
+    });
+    // get player object when custom embed creates a player
+    document.addEventListener("dmstory-player-create",(e)=>{
+        console.log(e.detail); // {player: playerObject}
     })
 </script>
 ```
@@ -203,6 +216,7 @@ Example :
 
 | Name | Type | Info | Description |
 | :---: | :---: | :---: |--- |
+| `dmstory-player-create` | CustomEvent | provides `{detail:{player: playerObject }}` inside event object |Sent when player is created. |
 | `dm-story-enter-fullscreen` | CustomEvent | Fire when the Dailymotion story enters fullscreen mode. |
 | `dm-story-exit-fullscreen` | CustomEvent | Fire when the Dailymotion story exits the fullscreen mode. |
 
