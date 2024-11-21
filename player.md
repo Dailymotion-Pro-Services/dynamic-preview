@@ -29,14 +29,14 @@ You need to do 2 things to embed the Previews.
 | type | string | Can be set as `vertical`/ `horizontal` type of the preview. By default its `horizontal` i.e., `16:9` aspect-ratio |
 
 ### Example Links
-- [DM Preview demo](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index.html)
-- [DM Preview fixed](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index_fixed.html)
-- [DM Preview vertical](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/basic/index_vertical.html)
+- [DM Preview demo](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_preview_player/basic/index.html)
+- [DM Preview fixed](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_preview_player/basic/index_fixed.html)
+- [DM Preview vertical](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_preview_player/basic/index_vertical.html)
 
 ### Features:
 
 - Dailymotion Previews also provide features to customize the title and its CTA ( Call to Action ). By default clicking on a title will redirect to the Dailymotion video page.  
-To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dmvs-apac.github.io/dynamic-preview/player#start-embedding).  
+To customize title, you need to add `<script type="application/json" id="dm_preview_text" >` tag before [embed code for Previews](https://dailymotion-pro-services.github.io/dynamic-preview/player#start-embedding).  
 Data for title card can be set inside `<script type="application/json">` as `JSON` format.  
 Here is an example.
 ```html
@@ -69,4 +69,4 @@ Here is an example.
 ```
 
 **Example:**
-- [Title CTA card - playground](https://dmvs-apac.github.io/dynamic-preview/examples/dm_preview_player/title_card/index.html)
+- [Title CTA card - playground](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_preview_player/title_card/index.html)
