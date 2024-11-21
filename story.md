@@ -225,6 +225,6 @@ Example :
 | `dm-story-exit-fullscreen` | CustomEvent | Fire when the Dailymotion story exits the fullscreen mode. |
 
 ### Example Links
-- [DM Story carousel](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/carousel.html)
-- [DM Story grid](https://dmvs-apac.github.io/dynamic-preview/examples/dm_story/grid.html)
+- [DM Story carousel](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_story/carousel.html)
+- [DM Story grid](https://dailymotion-pro-services.github.io/dynamic-preview/examples/dm_story/grid.html)
 - [DM Story grid interstitial Ads](https://staging.dmvs-apac.com/dmStory/lab/interstitial-ads.html)
